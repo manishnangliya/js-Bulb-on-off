@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb On Off</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="img1">
+        <figure>
+            <img id="bulb1" src="off.jpg" alt="off Image" height="200px" width="200px" >
+            <figcaption>
+                <p> Light on off </p>
+            </figcaption>
+        </figure>
+        <figure>
+            <img id="bulb2" src="off.jpg" alt="off Image" height="200px" width="200px" >
+            <figcaption>
+                <p> Light on off </p>
+            </figcaption>
+        </figure>
+        <figure>
+            <img id="bulb3" src="off.jpg" alt="off Image" height="200px" width="200px" >
+            <figcaption>
+                <p> Light on off </p>
+            </figcaption>
+        </figure>
+        <figure>
+            <img id="bulb4" src="off.jpg" alt="off Image" height="200px" width="200px" >
+            <figcaption>
+                <p> Light on off </p>
+            </figcaption>
+        </figure>
+        <figure>
+            <img id="bulb5" src="off.jpg" alt="off Image" height="200px" width="200px" >
+            <figcaption>
+                <p> Light on off </p>
+            </figcaption>
+        </figure>
+    </div>
+    <div class="onoffbtn">
+        <label class="switch">
+            <input type="checkbox" onclick="tubelight()">
+            <span class="slider"></span>
+          </label>
+    </div>
+
+    <script>
+        const tubelight = () =>{
+            for(i =1;i<=5;i++)
+            {
+                let img1 = document.getElementById("bulb"+i);
+
+                if(img1.src.match("off"))
+                    img1.src = "on.jpg";
+                else
+                    img1.src = "off.jpg";
+            }
+        }
+    </script>
+</body>
+
+</html>
